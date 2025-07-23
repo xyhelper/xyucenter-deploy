@@ -3,8 +3,8 @@ version: '3.8'
 services:
 
   backend:
-    image: registry.xyhelper.cn/xyucenter-backend:dev
-    container_name: xyucenter-backend
+    image: ghcr.io/xyhelper/xyucenter:dev
+    container_name: xyucenter
     ports:
       - "127.0.0.1:8001:8001"
     environment:
