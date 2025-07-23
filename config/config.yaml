@@ -80,12 +80,12 @@ wechat_pay:
   mch_api_v3_key: ""
   serial_no: "" 
   private_key: ""  # 商户api私钥文件路径
-  notify_url: ""
+  notify_url: "服务地址/api/v1/payment/wechat/callback" # 回调地址
 
 alipay_pay:
   app_id: ""
   private_key: ""
   public_key: ""
-  notify_url: ""
-  return_url: ""
-  gateway_url: ""
+  notify_url: "服务地址/api/v1/payment/alipay/callback" # 回调地址
+  return_url: "服务地址/xyucenter/#/userOrders" # 支付成功跳转页面
+  gateway_url: "https://openapi.alipay.com/gateway.do" # 网关地址
