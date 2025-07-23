@@ -46,6 +46,8 @@ cd xyucenter-backend
 
 用户端访问地址为 http://服务器 ip:8001
 
+用户中心地址为 http://服务器 ip:9000/xyucenter
+
 管理后台地址为 http://服务器 ip:9000/xyhelper/
 
 默认用户名密码为 admin/123456
