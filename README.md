@@ -56,15 +56,15 @@ cd xyucenter-backend
    注册应用之后，点击Applications中应用，然后找到配置信息,替换你自己的Auth0的域名，客户端ID以及客户端密钥
    ![alt text](images/image-3.png)
    ![alt text](images/image-4.png)
-   服务的访问域名地址确定之后，修改AUTH0_CALLBACK_URL值，设置AUTH0允许回调地址
-   将中心回调地址和子应用回调地址配置在Allowed Callback URLs和Allowed Logout URLs上
-   中心回调地址：AUTH0_CALLBACK_URL/api/v1/center/getToken
+   服务的访问域名地址确定之后，修改AUTH0_CALLBACK_URL值，设置AUTH0允许回调地址  
+   将中心回调地址和子应用回调地址配置在Allowed Callback URLs和Allowed Logout URLs上  
+   中心回调地址：AUTH0_CALLBACK_URL/api/v1/center/getToken  
    子应用回调地址：AUTH0_CALLBACK_URL/auth0/callback
    ![alt text](images/image-5.png)
 
-4. 配置账单中的公司信息和子应用的JWT秘钥
-   BILL_COMPANY_NAME      公司名称
-   BILL_COMPANY_ADDRESS   公司地址
+4. 配置账单中的公司信息和子应用的JWT秘钥  
+   BILL_COMPANY_NAME      公司名称  
+   BILL_COMPANY_ADDRESS   公司地址  
    JWT_SECRET_KEY         jwt密钥
 
 5. 配置项目服务，mysql和redis的端口号
@@ -76,9 +76,9 @@ cd xyucenter-backend
    在项目根目录创建certs/alipay和certs/wechatpay目录，将支付宝证书和微信支付证书放入，微信支付采用v3版本，秘钥使用.pem格式
    ![alt text](images/image-9.png)
 
-7. 修改config/config.yaml文件中的支付配置
-   其中wechat_pay（微信支付）notify_url（回调地址）配置：服务域名地址/api/v1/payment/wechat/callback
-      alipay_pay (支付宝支付) notify_url（回调地址）配置：服务域名地址/api/v1/payment/alipay/callback
+7. 修改config/config.yaml文件中的支付配置  
+   其中wechat_pay（微信支付）notify_url（回调地址）配置：服务域名地址/api/v1/payment/wechat/callback  
+      alipay_pay (支付宝支付) notify_url（回调地址）配置：服务域名地址/api/v1/payment/alipay/callback  
       alipay_pay (支付宝支付) return_url（支付成功回调页面）配置：服务域名地址/xyucenter/#/userOrders
    ![alt text](image.png)
 
