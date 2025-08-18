@@ -93,9 +93,11 @@ cd xyucenter-backend
 
 11. 登录管理后台 https://域名/xyhelper/，可以配置子应用以及商品服务信息
    ![alt text](images/image-14.png)
+   ![alt text](images/image-15.png)
+   ![alt text](images/image-16.png)
 
 12. 用户登录 https://域名/xyucenter/，可以自行订购服务、充值等
-   ![alt text](images/image-15.png)
+   ![alt text](images/image-17.png)
 
 ## 使用方法
 
