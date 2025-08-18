@@ -89,6 +89,13 @@ cd xyucenter-backend
 9. 命令终端，输入cd xyucenter-backend进入到项目中，再执行./deploy.sh，启动项目
    ![alt text](images/image-13.png)
 
+10. 初始化数据库，使用工具连接上服务的数据库，执行docker-entrypoint-initdb.d/cool-20250723-091400.sql文件，初始化菜单
+
+11. 登录管理后台 https://域名/xyhelper/，可以配置子应用以及商品服务信息
+   ![alt text](images/image-14.png)
+
+12. 用户登录 https://域名/xyucenter/，可以自行订购服务、充值等
+   ![alt text](images/image-15.png)
 
 ## 使用方法
 
