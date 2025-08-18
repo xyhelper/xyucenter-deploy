@@ -42,6 +42,18 @@ cd xyucenter-backend
 ./deploy.sh
 ```
 
+## 图文部署
+
+1. 克隆xyucenter-deploy仓库到服务器上，使用vscode连接上远程服务器，然后选择克隆项目，输入下面git clone命令
+   git clone --depth=1 https://github.com/xyhelper/xyucenter-deploy.git xyucenter-backend
+   ![alt text](images/image-1.png)
+
+2. 项目克隆之后，打开该项目，打开之后如下图所示
+   
+
+   
+
+
 ## 使用方法
 
 用户端访问地址为 http://服务器 ip:8001
