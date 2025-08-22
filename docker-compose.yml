@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
 
@@ -15,11 +14,6 @@ services:
       - BILL_COMPANY_NAME=  # 账单中的公司名称
       - BILL_COMPANY_ADDRESS= # 账单中的公司地址
       - JWT_SECRET_KEY= #jwt密钥
-    depends_on:
-      mysql:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
     volumes:
       - ./manifest:/app/manifest
       - ./certs:/app/certs # 支付证书路径
