@@ -9,9 +9,9 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - FILESERVERPREFIX= # 文件服务器前缀
-      - AUTH0_DOMAIN=dev-abvlgu4zvxj6uws8.us.auth0.com #Auth0 域名
-      - AUTH0_CLIENT_ID=7VRjxtWr9fvsvBVQP6oVbcqLEJN0MLEP # Auth0 客户端ID
-      - AUTH0_CLIENT_SECRET=7VRjxtWr9fvsvBVQP6oVbcqLEJN0MLEP #Auth0 客户端密钥
+      - AUTH0_DOMAIN= #Auth0 域名
+      - AUTH0_CLIENT_ID= # Auth0 客户端ID
+      - AUTH0_CLIENT_SECRET= #Auth0 客户端密钥
       - AUTH0_CALLBACK_URL= # 回调地址
       - BILL_COMPANY_NAME=  # 账单中的公司名称
       - BILL_COMPANY_ADDRESS= # 账单中的公司地址
