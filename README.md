@@ -80,21 +80,19 @@ cd xyucenter-backend
 7. 命令终端，输入cd xyucenter-backend进入到项目中，再执行./deploy.sh，启动项目
    ![alt text](images/image-13.png)
 
-8. 初始化数据库，使用工具连接上服务的数据库，执行docker-entrypoint-initdb.d/cool-20250723-091400.sql文件，初始化菜单
-
-9. 登录管理后台 https://域名/xyhelper/，可以配置子应用以及商品服务信息
+8. 登录管理后台 https://域名/xyhelper/，可以配置子应用以及商品服务信息
    ![alt text](images/image-14.png)
    ![alt text](images/image-15.png)
    ![alt text](images/image-16.png)
 
-10. 用户登录 https://域名/xyucenter/，可以自行订购服务、充值等
+9. 用户登录 https://域名/xyucenter/，可以自行订购服务、充值等
    ![alt text](images/image-17.png)
 
 ## 使用方法
 
-用户端访问地址为 http://服务器 ip:8001
+用户端访问地址为 http://服务器 ip:8600
 
-用户中心地址为 http://服务器 ip:9000/xyucenter
+用户中心地址为 http://服务器 ip:9000/xyucenter/
 
 管理后台地址为 http://服务器 ip:9000/xyhelper/
 
