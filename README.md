@@ -80,7 +80,7 @@ cd xyucenter-backend
    其中wechat_pay（微信支付）notify_url（回调地址）配置：服务域名地址/api/v1/payment/wechat/callback  
       alipay_pay (支付宝支付) notify_url（回调地址）配置：服务域名地址/api/v1/payment/alipay/callback  
       alipay_pay (支付宝支付) return_url（支付成功回调页面）配置：服务域名地址/xyucenter/#/userOrders
-   ![alt text](image.png)
+   ![alt text](images/image-10.png)
 
 8. 保证config/config.yaml文件中的服务端口、mysql端口、redis端口与第5步骤中的服务中的端口一致
    ![alt text](images/image-11.png)
