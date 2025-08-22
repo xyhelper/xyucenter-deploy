@@ -62,11 +62,6 @@ modules:
       log:
         enable: 1
 
-GROKPROXY: ""
-APIAUTH: ""
-
-DEVMODE: true
-
 jwt:
   expire: 86400           # Token过期时间（秒）
   refresh_expire: 604800  # 刷新Token过期时间（秒）
