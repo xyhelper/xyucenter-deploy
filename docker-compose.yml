@@ -3,10 +3,9 @@ version: '3.8'
 services:
 
   backend:
-    image: ghcr.io/xyhelper/xyucenter:dev
-    container_name: xyucenter
+    image: ghcr.io/xyhelper/xyucenter
     ports:
-      - "127.0.0.1:8001:8001"
+      - "8600:8001"
     environment:
       - TZ=Asia/Shanghai
       - FILESERVERPREFIX= # 文件服务器前缀
@@ -16,24 +15,17 @@ services:
       - AUTH0_CALLBACK_URL= # 回调地址
       - BILL_COMPANY_NAME=  # 账单中的公司名称
       - BILL_COMPANY_ADDRESS= # 账单中的公司地址
-      - JWT_SECRET_KEY=xyhelper-auth-api-secret #jwt密钥
+      - JWT_SECRET_KEY= #jwt密钥
     depends_on:
       mysql:
         condition: service_healthy
       redis:
         condition: service_healthy
-    network_mode: host
     volumes:
       - ./manifest:/app/manifest
       - ./certs:/app/certs # 支付证书路径
       - ./config/config.yaml:/app/config.yaml
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
 
   mysql:
     image: mysql:8
@@ -47,14 +39,6 @@ services:
       MYSQL_DATABASE: "cool"
       MYSQL_USER: "cool"
       MYSQL_PASSWORD: "123123"
-    ports:
-      - 127.0.0.1:3306:3306
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p123456"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
     restart: unless-stopped
 
   redis:
@@ -63,16 +47,4 @@ services:
       TZ: Asia/Shanghai
     volumes:
       - ./data/redis/:/data/
-    ports:
-      - 127.0.0.1:6379:6379
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 10s
     restart: unless-stopped
-
-volumes:
-  mysql-data:
-  redis-data: 

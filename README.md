@@ -67,36 +67,31 @@ cd xyucenter-backend
    BILL_COMPANY_ADDRESS   公司地址  
    JWT_SECRET_KEY         jwt密钥
 
-5. 配置项目服务，mysql和redis的端口号
-   ![alt text](images/image-6.png)
-   ![alt text](images/image-7.png)
-   ![alt text](images/image-8.png)
-
-6. 挂载支付证书
+5. 挂载支付证书
    在项目根目录创建certs/alipay和certs/wechatpay目录，将支付宝证书和微信支付证书放入，微信支付采用v3版本，秘钥使用.pem格式
    ![alt text](images/image-9.png)
 
-7. 修改config/config.yaml文件中的支付配置  
+6. 修改config/config.yaml文件中的支付配置  
    其中wechat_pay（微信支付）notify_url（回调地址）配置：服务域名地址/api/v1/payment/wechat/callback  
       alipay_pay (支付宝支付) notify_url（回调地址）配置：服务域名地址/api/v1/payment/alipay/callback  
       alipay_pay (支付宝支付) return_url（支付成功回调页面）配置：服务域名地址/xyucenter/#/userOrders
    ![alt text](images/image-10.png)
 
-8. 保证config/config.yaml文件中的服务端口、mysql端口、redis端口与第5步骤中的服务中的端口一致
+7. 保证config/config.yaml文件中的服务端口、mysql端口、redis端口与第5步骤中的服务中的端口一致
    ![alt text](images/image-11.png)
    ![alt text](images/image-12.png)
 
-9. 命令终端，输入cd xyucenter-backend进入到项目中，再执行./deploy.sh，启动项目
+8. 命令终端，输入cd xyucenter-backend进入到项目中，再执行./deploy.sh，启动项目
    ![alt text](images/image-13.png)
 
-10. 初始化数据库，使用工具连接上服务的数据库，执行docker-entrypoint-initdb.d/cool-20250723-091400.sql文件，初始化菜单
+9. 初始化数据库，使用工具连接上服务的数据库，执行docker-entrypoint-initdb.d/cool-20250723-091400.sql文件，初始化菜单
 
-11. 登录管理后台 https://域名/xyhelper/，可以配置子应用以及商品服务信息
+10. 登录管理后台 https://域名/xyhelper/，可以配置子应用以及商品服务信息
    ![alt text](images/image-14.png)
    ![alt text](images/image-15.png)
    ![alt text](images/image-16.png)
 
-12. 用户登录 https://域名/xyucenter/，可以自行订购服务、充值等
+11. 用户登录 https://域名/xyucenter/，可以自行订购服务、充值等
    ![alt text](images/image-17.png)
 
 ## 使用方法
