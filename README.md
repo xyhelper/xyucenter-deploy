@@ -51,8 +51,10 @@ cd xyucenter-backend
 2. 项目克隆之后，打开该项目，打开之后如下图所示，打开docker-compose.yml，修改环境变量
    ![alt text](images/image-2.png)
 
-3. 配置AUTH0参数，找到backend服务下面的environment
-   修改AUTH0_DOMAIN、AUTH0_CLIENT_ID、AUTH0_CLIENT_SECRET的参数值，具体数据从auth0中获取，登录https://auth0.com/
+3. 配置AUTH参数，找到backend服务下面的environment
+   修改AUTH_DOMAIN、AUTH_CLIENT_ID、AUTH_CLIENT_SECRET的参数值，
+   支持两种方式配置：auth0和authorizer，下面介绍auth0的参数配置（authorizer同理获取到AUTH_DOMAIN、AUTH_CLIENT_ID、AUTH_CLIENT_SECRET参数配置即可）
+   具体数据从auth0中获取，登录https://auth0.com/
    注册应用之后，点击Applications中应用，然后找到配置信息,替换你自己的Auth0的域名，客户端ID以及客户端密钥
    ![alt text](images/image-3.png)
    ![alt text](images/image-4.png)

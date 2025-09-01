@@ -7,10 +7,10 @@ services:
       - "8600:8001"
     environment:
       - TZ=Asia/Shanghai
-      - AUTH0_DOMAIN= #Auth0 域名
-      - AUTH0_CLIENT_ID= # Auth0 客户端ID
-      - AUTH0_CLIENT_SECRET= #Auth0 客户端密钥
-      - AUTH0_CALLBACK_URL= # 本服务地址
+      - AUTH_DOMAIN= #Auth 域名
+      - AUTH_CLIENT_ID= # Auth 客户端ID
+      - AUTH_CLIENT_SECRET= #Auth 客户端密钥
+      - AUTH_CALLBACK_URL= # 本服务地址
       - BILL_COMPANY_NAME=  # 账单中的公司名称
       - BILL_COMPANY_ADDRESS= # 账单中的公司地址
       - JWT_SECRET_KEY= #jwt密钥
