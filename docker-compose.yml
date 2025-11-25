@@ -2,7 +2,7 @@
 services:
 
   backend:
-    image: ghcr.io/xyhelper/xyucenter
+    image: ghcr.io/xyhelper/xyucenter:latest
     ports:
       - "8600:8001"
     environment:
